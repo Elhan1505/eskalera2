@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Деревянные лестницы премиум-класса в Подмосковье. Изготовление за 25 дней, гарантия 7 лет. Закончите ремонт с гордостью.">
+    <title>Эскалера - Деревянные лестницы, которые фотографируют гости</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- БЛОК 1: TRANSGRESSIVE HEADLINE -->
+    <section id="hero" class="hero-section">
+        <div class="container">
+            <h1 class="hero-title glitch-text">
+                Вы уже 18 месяцев строите дом.<br>
+                Осталась последняя деталь, которая <span class="glitch">всё испортит</span>.
+            </h1>
+            <p class="hero-subtitle">
+                Лестница. Или вы выберете правильно за 25 дней,<br>
+                или будете её ненавидеть следующие 25 лет.
+            </p>
+            <button class="cta-primary" data-scroll-to="form-section">
+                Сделать так, чтобы гости фотографировали
+            </button>
+        </div>
+    </section>
+
+    <!-- БЛОК 2: ВИДЕО ДО/ПОСЛЕ -->
+    <section id="video-proof" class="video-section">
+        <div class="container">
+            <!-- TODO: Замените src на путь к вашему видео (7-секундное видео до/после) -->
+            <!-- Видео должно показать контраст: скрипучая лестница vs красивая дубовая -->
+            <video id="dopamine-hook" class="proof-video" autoplay muted loop playsinline>
+                <source src="images/video-before-after.webm" type="video/webm">
+                <source src="images/video-before-after.mp4" type="video/mp4">
+                <track kind="captions" src="captions/ru.vtt" srclang="ru">
+            </video>
+            <div class="video-caption">
+                <p>25 дней. 7 лет гарантии. 0% скрипа.</p>
+                <p class="video-subcaption">Это может быть у вас через 25 дней.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- БЛОК 3: ВЫБОР БОЛИ (упрощённый AI-мем) -->
+    <section id="pain-selector" class="pain-section">
+        <div class="container">
+            <h2>Ваше лицо, когда лестница не вписалась в интерьер</h2>
+            <p class="section-subtitle">Выберите, что вас беспокоит больше всего:</p>
+            <div class="pain-buttons">
+                <button class="pain-btn" data-pain="guests">Стыдно перед гостями</button>
+                <button class="pain-btn" data-pain="child">Боюсь за ребёнка</button>
+                <button class="pain-btn" data-pain="tired">Устал от ремонта</button>
+            </div>
+            <div class="meme-container" id="meme-display">
+                <!-- TODO: Замените src на реальные мемы для каждой боли -->
+                <img src="images/meme-placeholder.jpg" alt="мем" class="meme-image">
+                <p class="meme-text">"Когда ты 2 года строишь дом, а лестница превращает его в музей строительных ошибок"</p>
+            </div>
+            <button class="cta-secondary" data-scroll-to="form-section">
+                Показать мне лестницу, которая впишется
+            </button>
+        </div>
+    </section>
+
+    <!-- БЛОК 4: БОЛЬ В ЦИФРАХ -->
+    <section id="pain-numbers" class="numbers-section">
+        <div class="container">
+            <h2>Сколько стоит ошибка с лестницей?</h2>
+            <div class="infographic-grid">
+                <div class="card animate-on-scroll" data-metric="85%">
+                    <h3 class="card-number">85%</h3>
+                    <p class="card-text">владельцев коттеджей<br>выбирают первую попавшуюся лестницу<br>→ и через 3 года переделывают</p>
+                    <p class="card-cost">Средний чек переделки: <strong>380 000 ₽</strong><br>+ 4 месяца нервов</p>
+                    <span class="card-source">Источник: наше исследование 47 клиентов</span>
+                </div>
+
+                <div class="card animate-on-scroll" data-metric="73%">
+                    <h3 class="card-number">73%</h3>
+                    <p class="card-text">лестниц из массива<br>начинают скрипеть через 1 год<br>(если влажность дерева >12%)</p>
+                    <span class="card-source">Источник: база данных Эскалера</span>
+                </div>
+
+                <div class="card animate-on-scroll" data-metric="3">
+                    <h3 class="card-number">3</h3>
+                    <p class="card-text">Замер у 3 компаний =<br>3 выходных потеряно</p>
+                    <p class="card-benefit">Мы приедем в субботу в 10:00<br>и уедем с готовым проектом</p>
+                    <p class="card-save">Сэкономим вам <strong>11 часов</strong></p>
+                </div>
+
+                <div class="card animate-on-scroll" data-metric="12">
+                    <h3 class="card-number">12 дней</h3>
+                    <p class="card-text">Средний срок изготовления в Подмосковье: <strong>47 дней</strong><br>Мы: 25 рабочих дней = 35 календарных</p>
+                    <p class="card-benefit">Вы въезжаете на 12 дней раньше</p>
+                    <p class="card-save">Экономия на аренде: <strong>+48 000 ₽</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- БЛОК 5: УТП 2.0 -->
+    <section id="utp" class="utp-section">
+        <div class="container">
+            <h1 class="identity-transformation">
+                Лестница, которую гости фотографируют,<br>
+                а вы показываете с гордостью.
+            </h1>
+            <p class="utp-subtitle">
+                Не просто соединение этажей — объявление вашего успеха.
+            </p>
+            <div class="proof-points">
+                <span class="proof-badge">25 рабочих дней</span>
+                <span class="proof-badge">7 лет гарантии</span>
+                <span class="proof-badge">3D в вашем интерьере</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- БЛОК 6: ТРИГГЕРНЫЙ МОСТ (мастер Алексей) -->
+    <section id="expert-story" class="expert-section">
+        <div class="container">
+            <div class="expert-content">
+                <!-- TODO: Замените src на реальное фото мастера-замерщика -->
+                <img src="images/master-photo.jpg" alt="Алексей, мастер-замерщик" class="expert-photo">
+                <div class="expert-quote">
+                    <blockquote>
+                        "Я лично объездил 183 коттеджа в Подмосковье за 2023-й.<br>
+                        В 127 из них лестница была "последней ошибкой ремонта".<br>
+                        <strong>Мы это исправили.</strong>"
+                    </blockquote>
+                    <p class="expert-name">— Алексей, мастер-замерщик Эскалеры</p>
+                    <p class="expert-title">Ведущий проект 127 лестниц</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- БЛОК 7: ГАЛЕРЕЯ ЛЕСТНИЦ -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <h2>Наши проекты в Подмосковье</h2>
+            <div class="gallery-grid">
+                <!-- TODO: Замените все src на реальные фото ваших проектов (12 фото) -->
+                <div class="gallery-item animate-on-scroll">
+                    <img src="images/project-1.jpg" alt="Лестница проект 1">
+                    <div class="gallery-overlay">
+                        <p class="gallery-benefit">Ширина ступени 30 см → ребёнок не споткнётся</p>
+                    </div>
+                </div>
+                <div class="gallery-item animate-on-scroll">
+                    <img src="images/project-2.jpg" alt="Лестница проект 2">
+                    <div class="gallery-overlay">
+                        <p class="gallery-benefit">Дубовый массив → 0% скрипа через 5 лет</p>
+                    </div>
+                </div>
+                <div class="gallery-item animate-on-scroll">
+                    <img src="images/project-3.jpg" alt="Лестница проект 3">
+                    <div class="gallery-overlay">
+                        <p class="gallery-benefit">Перила 90 см → безопасность для детей</p>
+                    </div>
+                </div>
+                <div class="gallery-item animate-on-scroll">
+                    <img src="images/project-4.jpg" alt="Лестница проект 4">
+                    <div class="gallery-overlay">
+                        <p class="gallery-benefit">Идеально вписывается в интерьер</p>
+                    </div>
+                </div>
+                <div class="gallery-item animate-on-scroll">
+                    <img src="images/project-5.jpg" alt="Лестница проект 5">
+                    <div class="gallery-overlay">
+                        <p class="gallery-benefit">Подсветка ступеней → элегантность + безопасность</p>
+                    </div>
+                </div>
+                <div class="gallery-item animate-on-scroll">
+                    <img src="images/project-6.jpg" alt="Лестница проект 6">
+                    <div class="gallery-overlay">
+                        <p class="gallery-benefit">Поселок "Московский" → ваши соседи</p>
+                    </div>
+                </div>
+                <div class="gallery-item animate-on-scroll">
+                    <img src="images/project-7.jpg" alt="Лестница проект 7">
+                    <div class="gallery-overlay">
+                        <p class="gallery-benefit">Винтовая конструкция → экономия пространства</p>
+                    </div>
+                </div>
+                <div class="gallery-item animate-on-scroll">
+                    <img src="images/project-8.jpg" alt="Лестница проект 8">
+                    <div class="gallery-overlay">
+                        <p class="gallery-benefit">Стеклянные перила → визуально не загромождает</p>
+                    </div>
+                </div>
+                <div class="gallery-item animate-on-scroll">
+                    <img src="images/project-9.jpg" alt="Лестница проект 9">
+                    <div class="gallery-overlay">
+                        <p class="gallery-benefit">Кованые элементы → классическая элегантность</p>
+                    </div>
+                </div>
+                <div class="gallery-item animate-on-scroll">
+                    <img src="images/project-10.jpg" alt="Лестница проект 10">
+                    <div class="gallery-overlay">
+                        <p class="gallery-benefit">Комбинированные материалы → современный стиль</p>
+                    </div>
+                </div>
+                <div class="gallery-item animate-on-scroll">
+                    <img src="images/project-11.jpg" alt="Лестница проект 11">
+                    <div class="gallery-overlay">
+                        <p class="gallery-benefit">Большая ширина → комфорт для всей семьи</p>
+                    </div>
+                </div>
+                <div class="gallery-item animate-on-scroll">
+                    <img src="images/project-12.jpg" alt="Лестница проект 12">
+                    <div class="gallery-overlay">
+                        <p class="gallery-benefit">Идеально подобранный тон дерева</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- БЛОК 8: BEFORE/AFTER -->
+    <section id="before-after" class="comparison-section">
+        <div class="container">
+            <h2>Что вы получаете, выбрав правильно</h2>
+            <div class="comparison-grid">
+                <div class="comparison-card before">
+                    <h3 class="comparison-title">Неправильный выбор</h3>
+                    <ul class="comparison-list">
+                        <li>❌ Скрип при каждом шаге</li>
+                        <li>❌ Скользкие ступени</li>
+                        <li>❌ Промежутки в перилах (опасно для детей)</li>
+                        <li>❌ Не вписывается в интерьер</li>
+                    </ul>
+                    <p class="comparison-emotion">Эмоция: <strong>Страх, стыд, раздражение</strong></p>
+                    <p class="comparison-cost">Цена ошибки: <strong>380 000 ₽</strong> на переделку через 3 года</p>
+                </div>
+
+                <div class="comparison-card after">
+                    <h3 class="comparison-title">Правильный выбор (Эскалера)</h3>
+                    <ul class="comparison-list">
+                        <li>✅ Абсолютная тишина</li>
+                        <li>✅ Широкие ступени (30 см)</li>
+                        <li>✅ Сплошные перила 90 см</li>
+                        <li>✅ Идеально вписывается</li>
+                    </ul>
+                    <p class="comparison-emotion">Эмоция: <strong>Спокойствие, гордость, уют</strong></p>
+                    <p class="comparison-cost">Цена через 7 лет: <strong>0 ₽</strong> на ремонт</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- БЛОК 9: БЛОК ПРОТИВОРЕЧИЙ -->
+    <section id="contradiction" class="contradiction-section">
+        <div class="container">
+            <h2>Все говорят: "Лестница делается 2 месяца"</h2>
+            <p class="contradiction-subtitle">Наши 47 клиентов говорят: <strong>"25 дней — это реально"</strong></p>
+            <div class="production-schedule">
+                <div class="schedule-info">
+                    <p class="schedule-status">📅 График загрузки производства</p>
+                    <p class="schedule-slot">Сейчас свободен <strong>1 слот на ноябрь</strong> → старт через 3 дня</p>
+                    <p class="schedule-urgency">Следующий свободный слот только через 2 недели</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- БЛОК 10: LIVE SOCIAL PROOF (статичный виджет) -->
+    <div id="social-proof-widget" class="social-proof-widget">
+        <div class="widget-content">
+            <p class="widget-title">🔔 Только что в поселке "Московский"</p>
+            <p class="widget-text">установили лестницу <strong>#128</strong></p>
+            <p class="widget-time">→ 2 часа назад</p>
+        </div>
+        <button class="widget-close">×</button>
+    </div>
+
+    <!-- БЛОК 11: МАТРИЦА РЕШЕНИЙ (интерактивная) -->
+    <section id="decision-matrix" class="matrix-section">
+        <div class="container">
+            <h2>Что вас беспокоит больше всего?</h2>
+            <p class="section-subtitle">Кликните на свою боль — увидите решение</p>
+            <div class="matrix-table">
+                <div class="matrix-row" data-fear="design">
+                    <div class="matrix-fear">
+                        <h3>Я боюсь, что...</h3>
+                        <p>...разрушу интерьер неправильным выбором лестницы</p>
+                        <span class="matrix-expand">▼ Показать решение</span>
+                    </div>
+                    <div class="matrix-solution" style="display: none;">
+                        <h4>Вот решение Эскалеры:</h4>
+                        <p>3D-визуализация лестницы в вашем доме ДО начала производства</p>
+                        <p class="matrix-proof"><strong>Доказательство:</strong> 127 проектов, 0 возвратов</p>
+                    </div>
+                </div>
+
+                <div class="matrix-row" data-fear="fraud">
+                    <div class="matrix-fear">
+                        <h3>Я боюсь, что...</h3>
+                        <p>...меня обманут подрядчики (уже обжигался)</p>
+                        <span class="matrix-expand">▼ Показать решение</span>
+                    </div>
+                    <div class="matrix-solution" style="display: none;">
+                        <h4>Вот решение Эскалеры:</h4>
+                        <p>Договор с приложением ФОТО вашей лестницы (не чертёж)</p>
+                        <p class="matrix-proof"><strong>Доказательство:</strong> Платим 5 000 ₽ за каждый день просрочки</p>
+                    </div>
+                </div>
+
+                <div class="matrix-row" data-fear="safety">
+                    <div class="matrix-fear">
+                        <h3>Я боюсь, что...</h3>
+                        <p>...ребёнок упадёт со второго этажа</p>
+                        <span class="matrix-expand">▼ Показать решение</span>
+                    </div>
+                    <div class="matrix-solution" style="display: none;">
+                        <h4>Вот решение Эскалеры:</h4>
+                        <p>Перила 90 см, ступени 30 см, сертификат безопасности</p>
+                        <p class="matrix-proof"><strong>Доказательство:</strong> Видео-тест на 500 кг нагрузки</p>
+                    </div>
+                </div>
+
+                <div class="matrix-row" data-fear="squeak">
+                    <div class="matrix-fear">
+                        <h3>Я боюсь, что...</h3>
+                        <p>...лестница будет скрипеть</p>
+                        <span class="matrix-expand">▼ Показать решение</span>
+                    </div>
+                    <div class="matrix-solution" style="display: none;">
+                        <h4>Вот решение Эскалеры:</h4>
+                        <p>7 лет гарантии, лак Tikkurila, контроль влажности <12%</p>
+                        <p class="matrix-proof"><strong>Доказательство:</strong> Бесплатный осмотр через год</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- БЛОК 12: АНТИРЕТАРГЕТИНГОВАЯ ЗАЩИТА -->
+    <section id="anti-retargeting" class="honesty-section">
+        <div class="container">
+            <h2>"А если вы найдёте дешевле?"</h2>
+            <div class="honesty-content">
+                <p class="honesty-intro">Хорошо. Вот контакты 3-х мастерских в Подмосковье, где дешевле на 15-20%.</p>
+                <div class="honesty-questions">
+                    <p><strong>Но спросите их:</strong></p>
+                    <ol>
+                        <li>"Сколько лет гарантии?" <span class="highlight">(Мы: 7 лет)</span></li>
+                        <li>"Можно увидеть лестницу вживую у соседей?" <span class="highlight">(Мы: дам 3 адреса)</span></li>
+                        <li>"Сколько дней изготовление?" <span class="highlight">(Мы: 25)</span></li>
+                    </ol>
+                </div>
+                <p class="honesty-conclusion">Если ответы совпадут — выбирайте их. Мы не обидимся.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- БЛОК 13: MICRO-COMMITMENT FUNNEL -->
+    <section id="micro-commitment" class="commitment-section">
+        <div class="container">
+            <h2>Давайте начнём с малого</h2>
+            <div class="commitment-steps">
+                <!-- Шаг 1 -->
+                <div class="commitment-step">
+                    <label class="commitment-checkbox">
+                        <input type="checkbox" id="safety-check">
+                        <span>Я хочу, чтобы лестница была безопасной для детей</span>
+                    </label>
+                    <div class="commitment-result" id="safety-result" style="display: none;">
+                        <p>✅ Отлично! Смотрите наш видео-тест на 500 кг нагрузки:</p>
+                        <!-- TODO: Замените на реальное видео теста безопасности -->
+                        <video controls class="test-video">
+                            <source src="images/safety-test.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+
+                <!-- Шаг 2 -->
+                <div class="commitment-step">
+                    <h3>Узнайте примерную цену за 3 секунды</h3>
+                    <div class="calculator">
+                        <label for="floor-height">Выберите высоту этажа:</label>
+                        <select id="floor-height">
+                            <option value="">Выберите...</option>
+                            <option value="2.5">2,5 метра</option>
+                            <option value="2.7">2,7 метра</option>
+                            <option value="3.0">3,0 метра</option>
+                            <option value="3.5">3,5 метра</option>
+                        </select>
+                        <div class="calculator-result" id="calc-result" style="display: none;">
+                            <p class="price-estimate">Примерная цена: <strong><span id="price-value">0</span> ₽</strong></p>
+                            <button class="cta-secondary" data-scroll-to="form-section">Зафиксировать цену на 7 дней</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Шаг 3 -->
+                <div class="commitment-step">
+                    <h3>Бесплатная 3D-визуализация в вашем интерьере</h3>
+                    <p>Пришлите фото вашего интерьера — мы вставим лестницу в 3D за 24 часа</p>
+                    <form class="photo-upload-form">
+                        <input type="file" id="interior-photo" accept="image/*">
+                        <label for="interior-photo" class="upload-label">📷 Загрузить фото интерьера</label>
+                        <button type="button" class="cta-secondary" id="request-3d">Получить 3D-визуализацию бесплатно</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- БЛОК 14: ИСТОРИИ ТРАНСФОРМАЦИИ -->
+    <section id="transformation" class="transformation-section">
+        <div class="container">
+            <h2>История клиента: от стресса до гордости</h2>
+            <div class="timeline">
+                <!-- TODO: Замените на реальное видео с таймлайном или используйте статичные кадры -->
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-marker">День 0</div>
+                    <div class="timeline-content">
+                        <img src="images/timeline-day0.jpg" alt="День 0">
+                        <p class="timeline-quote">"Устал. Ремонт 2 года. Лестница последняя."</p>
+                        <p class="timeline-emotion">😰 Стресс</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-marker">День 10</div>
+                    <div class="timeline-content">
+                        <img src="images/timeline-day10.jpg" alt="День 10">
+                        <p class="timeline-quote">"О, это оно! Вот это вписывается!"</p>
+                        <p class="timeline-emotion">✨ Воодушевление</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-marker">День 25</div>
+                    <div class="timeline-content">
+                        <img src="images/timeline-day25.jpg" alt="День 25">
+                        <p class="timeline-quote">"Вот мои ступени. Дуб, массив. Круто."</p>
+                        <p class="timeline-emotion">👀 Любопытство</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-marker">День 40</div>
+                    <div class="timeline-content">
+                        <img src="images/timeline-day40.jpg" alt="День 40">
+                        <p class="timeline-quote">"Всё, дом готов. Приезжайте на новоселье."</p>
+                        <p class="timeline-emotion">🎉 Радость</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-marker">День 365</div>
+                    <div class="timeline-content">
+                        <img src="images/timeline-day365.jpg" alt="День 365">
+                        <p class="timeline-quote">"Не скрипит. Не трещит. Спасибо."</p>
+                        <p class="timeline-emotion">☕ Спокойствие</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- БЛОК 15: ЦЕНООБРАЗОВАНИЕ (Decoy Effect) -->
+    <section id="pricing" class="pricing-section">
+        <div class="container">
+            <h2>Выберите свой пакет</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3 class="pricing-title">Стандарт</h3>
+                    <p class="pricing-price">420 000 ₽</p>
+                    <ul class="pricing-features">
+                        <li>Массив дуба</li>
+                        <li>Базовые перила</li>
+                        <li>Гарантия 3 года</li>
+                        <li>Изготовление 35 дней</li>
+                    </ul>
+                    <button class="pricing-btn" data-scroll-to="form-section">Выбрать</button>
+                </div>
+
+                <div class="pricing-card recommended">
+                    <div class="pricing-badge">Рекомендуем</div>
+                    <h3 class="pricing-title">Гордость</h3>
+                    <p class="pricing-price">650 000 ₽</p>
+                    <ul class="pricing-features">
+                        <li>✅ Премиальный массив дуба</li>
+                        <li>✅ 3D-визуализация</li>
+                        <li>✅ <strong>Гарантия 7 лет</strong></li>
+                        <li>✅ Изготовление 25 дней</li>
+                        <li>✅ Подсветка ступеней</li>
+                        <li>✅ Лак Tikkurila</li>
+                    </ul>
+                    <button class="pricing-btn primary" data-scroll-to="form-section">Выбрать</button>
+                    <p class="pricing-note">Вместо 380 000 ₽ на переделку через 3 года</p>
+                </div>
+
+                <div class="pricing-card">
+                    <h3 class="pricing-title">Безупречность</h3>
+                    <p class="pricing-price">1 200 000 ₽</p>
+                    <ul class="pricing-features">
+                        <li>Эксклюзивное дерево</li>
+                        <li>Авторская резьба</li>
+                        <li>Личный куратор</li>
+                        <li>Гарантия 10 лет</li>
+                        <li>Изготовление 20 дней</li>
+                    </ul>
+                    <button class="pricing-btn" data-scroll-to="form-section">Выбрать</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- БЛОК 16: ЭКСПЕРТНЫЙ FAQ -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <h2>Вопросы из реальных звонков</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h3 class="faq-question">❓ А если нам не понравится, когда привезёте?</h3>
+                    <div class="faq-answer">
+                        <p>Вы подписываете не чертёж, а <strong>фото готовой лестницы</strong>. Если отличается больше чем на 5% — переделаем за свой счёт. В договоре это пункт 4.2.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">❓ Можно поговорить с вашими клиентами?</h3>
+                    <div class="faq-answer">
+                        <p>Вот 3 контакта владельцев лестниц в вашем районе. Но предупредите, что позвоните — они согласились помочь, но не обязаны отвечать.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">❓ А если дуб подорожает во время изготовления?</h3>
+                    <div class="faq-answer">
+                        <p>Цена в договоре <strong>фиксирована</strong>. Мы рискуем, не вы. В прошлом году дуб вырос на 15%, но мы выполнили 3 заказа по старой цене.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">❓ Почему вы делаете быстрее других?</h3>
+                    <div class="faq-answer">
+                        <p>Собственное производство + отлаженные процессы. Мы не ждём материалы — закупаем дуб сразу на 3 месяца вперёд.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">❓ Какая гарантия, что не сорвёте сроки?</h3>
+                    <div class="faq-answer">
+                        <p>В договоре пункт о штрафах: <strong>5 000 ₽ за каждый день просрочки</strong>. За 2 года мы заплатили ровно 0 рублей штрафов.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- БЛОК 17: TRUSTPILOT WIDGET (статичный) -->
+    <section id="reviews" class="reviews-section">
+        <div class="container">
+            <h2>Что говорят наши клиенты</h2>
+            <div class="nps-widget">
+                <p class="nps-score">Текущий NPS: <strong>87</strong></p>
+                <p class="nps-response">Отвечаем на сообщения в течение 2 часов</p>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Сделали ровно за 25 дней. Ребёнок бегает, я спокоен."</p>
+                    <p class="review-author">— Елена, поселок "Московский"</p>
+                    <p class="review-time">→ 2 часа назад</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"3D-визуализация спасла нас от ошибки — изменили дизайн до производства."</p>
+                    <p class="review-author">— Дмитрий, Пушкино</p>
+                    <p class="review-time">→ 1 день назад</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Год прошёл — ни одного скрипа. Гости действительно фотографируют."</p>
+                    <p class="review-author">— Игорь, Королёв</p>
+                    <p class="review-time">→ 3 дня назад</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- БЛОК 18: ЧАТБОТ-КОНСУЛЬТАНТ (упрощённый) -->
+    <section id="chatbot" class="chatbot-section">
+        <div class="container">
+            <h2>Есть вопросы? Спросите прямо сейчас</h2>
+            <div class="chatbot-widget">
+                <div class="chatbot-avatar">
+                    <!-- TODO: Замените на реальное фото мастера -->
+                    <img src="images/master-avatar.jpg" alt="Алексей">
+                </div>
+                <div class="chatbot-content">
+                    <p class="chatbot-name">Алексей, мастер-замерщик</p>
+                    <p class="chatbot-text">Отвечу на вопросы о технологии, покажу фото производства, запишу на замер</p>
+                    <!-- TODO: Интегрируйте с вашим Telegram-ботом или WhatsApp -->
+                    <a href="https://t.me/YOUR_TELEGRAM_BOT" class="chatbot-btn" target="_blank">Написать в Telegram</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- БЛОК 19: КОНТЕНТ ДЛЯ СОМНЕВАЮЩИХСЯ -->
+    <section id="comparison" class="comparison-table-section">
+        <div class="container">
+            <h2>Эскалера vs Конкуренты</h2>
+            <div class="table-wrapper">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Параметр</th>
+                            <th class="highlight-column">Эскалера</th>
+                            <th>Конкурент А</th>
+                            <th>Конкурент Б</th>
+                            <th>Конкурент В</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Срок изготовления</td>
+                            <td class="highlight-column"><strong>25 дней</strong></td>
+                            <td>45 дней</td>
+                            <td>60 дней</td>
+                            <td>50 дней</td>
+                        </tr>
+                        <tr>
+                            <td>Гарантия</td>
+                            <td class="highlight-column"><strong>7 лет</strong></td>
+                            <td>1 год</td>
+                            <td>3 года</td>
+                            <td>2 года</td>
+                        </tr>
+                        <tr>
+                            <td>3D-визуализация</td>
+                            <td class="highlight-column">✅ Бесплатно</td>
+                            <td>❌</td>
+                            <td>За доплату</td>
+                            <td>❌</td>
+                        </tr>
+                        <tr>
+                            <td>Штраф за просрочку</td>
+                            <td class="highlight-column"><strong>5 000 ₽/день</strong></td>
+                            <td>Нет</td>
+                            <td>Нет</td>
+                            <td>Нет</td>
+                        </tr>
+                        <tr>
+                            <td>Контакты клиентов</td>
+                            <td class="highlight-column">✅ Дадим 3 адреса</td>
+                            <td>❌</td>
+                            <td>❌</td>
+                            <td>❌</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="download-section">
+                <h3>Скачайте бесплатный чек-лист</h3>
+                <p>"7 ошибок при выборе деревянной лестницы"</p>
+                <button class="cta-secondary" data-scroll-to="form-section">Получить чек-лист на email</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- БЛОК 20 (ОСНОВНАЯ ФОРМА СБОРА ЛИДОВ) -->
+    <section id="form-section" class="form-section">
+        <div class="container">
+            <h2>Получите бесплатный чек-лист</h2>
+            <p class="form-subtitle">"7 ошибок при выборе деревянной лестницы"</p>
+            <div class="form-content">
+                <div class="form-mockup">
+                    <!-- TODO: Замените на реальный мокап вашего чек-листа -->
+                    <img src="images/checklist-mockup.png" alt="Чек-лист" class="mockup-image floating">
+                </div>
+                <div class="form-wrapper">
+                    <!-- TODO: Замените YOUR_FORM_ID на ваш реальный ID из Formspree.io -->
+                    <form id="lead-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                        <div class="form-group">
+                            <label for="name">Ваше имя *</label>
+                            <input type="text" id="name" name="name" required placeholder="Введите ваше имя">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required placeholder="primer@example.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Телефон (необязательно)</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__">
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label>
+                                <input type="checkbox" name="consent" required>
+                                <span>Я согласен на обработку персональных данных</span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="cta-primary form-submit">Получить чек-лист бесплатно</button>
+                    </form>
+
+                    <div id="form-success" class="form-message" style="display: none;">
+                        <p>✅ Чек-лист отправлен на ваш email!</p>
+                        <p>Проверьте папку "Входящие" (или "Спам")</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Эскалера - Деревянные лестницы премиум-класса</p>
+            <p>Мастерская в Королеве, Подмосковье</p>
+            <p>Телефон: <a href="tel:+79999999999">+7 (999) 999-99-99</a> | Email: <a href="mailto:info@eskalera.ru">info@eskalera.ru</a></p>
+        </div>
+    </footer>
+
+    <!-- EXIT-INTENT POPUP (БЛОК 20 - дополнительный) -->
+    <div id="exit-popup" class="exit-popup" style="display: none;">
+        <div class="popup-overlay"></div>
+        <div class="popup-content">
+            <button class="popup-close">&times;</button>
+            <h2>Понимаю. Решения не принимаются за 1 день.</h2>
+            <div class="popup-body">
+                <!-- TODO: Замените на реальное фото лестницы в районе клиента -->
+                <img src="images/neighbor-stair.jpg" alt="Лестница у соседей" class="popup-image">
+                <p>Это лестница в 2 км от вас (поселок "Московский").</p>
+                <p><strong>Завтра в 11:00</strong> хозяин будет дома и готов показать.</p>
+                <p>Можете съездить, не обязывая себя ничем.</p>
+                <button class="cta-primary" id="request-address">Да, хочу адрес</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

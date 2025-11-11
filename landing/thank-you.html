@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Спасибо за интерес к Эскалере! Чек-лист отправлен на ваш email.">
+    <title>Спасибо! | Эскалера</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .thank-you-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--dark-oak) 0%, #3E2723 100%);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .thank-you-content {
+            max-width: 700px;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .thank-you-icon {
+            font-size: 5rem;
+            margin-bottom: 1.5rem;
+            animation: scaleIn 0.6s ease;
+        }
+
+        .thank-you-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--white);
+        }
+
+        .thank-you-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .thank-you-steps {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            text-align: left;
+        }
+
+        .thank-you-steps h3 {
+            color: var(--gold-accent);
+            margin-bottom: 1rem;
+        }
+
+        .thank-you-steps ol {
+            padding-left: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .thank-you-steps li {
+            margin-bottom: 0.75rem;
+        }
+
+        .thank-you-actions {
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .thank-you-actions a,
+        .thank-you-actions button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            min-width: 250px;
+        }
+
+        .action-primary {
+            background-color: var(--green-cta);
+            color: var(--white);
+            border: none;
+        }
+
+        .action-primary:hover {
+            background-color: #45a049;
+            transform: translateY(-2px);
+        }
+
+        .action-secondary {
+            background-color: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .action-secondary:hover {
+            background-color: var(--white);
+            color: var(--dark-oak);
+        }
+
+        .social-links {
+            margin-top: 2rem;
+        }
+
+        .social-links h4 {
+            color: var(--gold-accent);
+            margin-bottom: 1rem;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            background-color: var(--gold-accent);
+            transform: scale(1.1);
+        }
+
+        @media (min-width: 768px) {
+            .thank-you-title {
+                font-size: 3rem;
+            }
+
+            .thank-you-actions {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="thank-you-section">
+        <div class="thank-you-content">
+            <div class="thank-you-icon">✅</div>
+
+            <h1 class="thank-you-title">Спасибо за ваш интерес!</h1>
+
+            <p class="thank-you-subtitle">
+                Чек-лист "7 ошибок при выборе деревянной лестницы" отправлен на ваш email.
+            </p>
+
+            <div class="thank-you-steps">
+                <h3>Что дальше?</h3>
+                <ol>
+                    <li>📧 Проверьте почту (и папку "Спам", если письмо не пришло)</li>
+                    <li>📄 Скачайте чек-лист и внимательно изучите</li>
+                    <li>📞 Мы свяжемся с вами в течение 2 часов, чтобы ответить на вопросы</li>
+                    <li>📅 Договоримся о бесплатном замере у вас дома (в удобное время)</li>
+                </ol>
+            </div>
+
+            <div class="thank-you-actions">
+                <!-- TODO: Замените ссылки на ваши реальные контакты -->
+                <a href="tel:+79999999999" class="action-primary">
+                    📞 Позвонить нам сейчас
+                </a>
+                <a href="index.html" class="action-secondary">
+                    🏠 Вернуться на главную
+                </a>
+            </div>
+
+            <div class="social-links">
+                <h4>Следите за нами:</h4>
+                <div class="social-icons">
+                    <!-- TODO: Замените ссылки на ваши реальные соцсети -->
+                    <a href="https://vk.com/eskalera" target="_blank" title="ВКонтакте">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                            <path d="M15.07 2H8.93C3.33 2 2 3.33 2 8.93v6.14C2 20.67 3.33 22 8.93 22h6.14c5.6 0 6.93-1.33 6.93-6.93V8.93C22 3.33 20.67 2 15.07 2zm3.8 14.84h-1.46c-.66 0-.86-.53-2.06-1.73-1.04-1-1.5-1.14-1.77-1.14-.36 0-.46.1-.46.59v1.58c0 .43-.14.68-1.23.68-1.82 0-3.84-1.1-5.26-3.15-2.13-2.99-2.71-5.24-2.71-5.7 0-.27.1-.52.59-.52h1.46c.44 0 .61.2.78.67.87 2.55 2.34 4.77 2.94 4.77.23 0 .33-.1.33-.68V8.9c-.07-1.16-.68-1.26-.68-1.67 0-.21.18-.43.46-.43h2.29c.37 0 .51.2.51.64v3.42c0 .37.17.51.27.51.23 0 .42-.14.85-.57 1.31-1.48 2.25-3.77 2.25-3.77.12-.27.32-.52.76-.52h1.46c.53 0 .65.27.53.64-.22.97-2.38 4.08-2.38 4.08-.19.31-.26.44 0 .79.19.26.81.79 1.23 1.27.75.85 1.33 1.56 1.48 2.06.16.49-.09.74-.61.74z"/>
+                        </svg>
+                    </a>
+                    <a href="https://t.me/eskalera" target="_blank" title="Telegram">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.12.03-1.99 1.27-5.62 3.73-.53.37-1.01.55-1.44.54-.47-.01-1.38-.27-2.05-.49-.82-.27-1.47-.42-1.42-.88.03-.24.37-.48 1.02-.73 4-1.74 6.68-2.88 8.03-3.44 3.82-1.59 4.61-1.87 5.13-1.87.11 0 .37.03.54.17.14.11.18.26.2.37.01.06.03.24.01.37z"/>
+                        </svg>
+                    </a>
+                    <a href="https://wa.me/79999999999" target="_blank" title="WhatsApp">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                        </svg>
+                    </a>
+                    <a href="https://instagram.com/eskalera" target="_blank" title="Instagram">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.3);">
+                <p style="font-size: 0.9rem; opacity: 0.7;">
+                    Мастерская "Эскалера" | Королёв, Подмосковье<br>
+                    Телефон: <a href="tel:+79999999999" style="color: var(--gold-accent);">+7 (999) 999-99-99</a><br>
+                    Email: <a href="mailto:info@eskalera.ru" style="color: var(--gold-accent);">info@eskalera.ru</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Анимация при загрузке
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Thank you page loaded');
+
+            // Можно добавить дополнительную аналитику
+            // gtag('event', 'conversion', {'send_to': 'YOUR_CONVERSION_ID'});
+        });
+    </script>
+
+</body>
+</html>
